@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: NFTLotteryContrac
+            expected-sender: ST1X6MMBFXZYKN74Q9PPJA28CSGZSMHG1HR4QJGYE
+            cost: 45210
+            path: contracts/NFTLotteryContrac.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
